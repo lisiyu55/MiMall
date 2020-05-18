@@ -15,6 +15,7 @@ export default {
   },
   data() {
     age: 18;
+    name: "lee";
   }
 };
 </script>
