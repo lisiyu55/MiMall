@@ -12,10 +12,6 @@ export default {
   name: "App",
   components: {
     HelloWorld
-  },
-  data() {
-    age: 18;
-    name: "lee";
   }
 };
 </script>
