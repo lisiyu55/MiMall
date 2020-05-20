@@ -6,13 +6,21 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from './components/HelloWorld.vue';
+import axios from 'axios';
+// import jsonp from 'jsonp';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
+  mounted() {
+    let url =
+      'https://www.easy-mock.com/mock/5b012c1fe6e1035843cd3aff/mockapi/table/list';
+    axios.get(url).then(() => {}); //是一个xhr请求
+    // jsonp(url, )//jsonp只是普通的
+  },
 };
 </script>
 
