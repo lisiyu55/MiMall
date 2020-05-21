@@ -5,13 +5,18 @@
 </template>
 
 <script>
+import storage from './storage/index';
 export default {
   name: 'App',
   components: {},
   data() {
     return {};
   },
-  mounted() {},
+  mounted() {
+    // storage.clear('abc', 'user');
+    // storage.setItem('loginName', 'lisiyu', 'login');
+    console.log(storage.getItem('password', 'login'));
+  },
 };
 </script>
 
