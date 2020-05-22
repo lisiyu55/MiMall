@@ -19,7 +19,10 @@ export default {
     // storage.setItem('loginName', 'lisiyu', 'login');
     // console.log(storage.getItem('password', 'login'));
     //演示使用本地mock的json数据
-    this.axios.get('/mock/user/login.json').then((res) => {
+    // this.axios.get('/mock/user/login.json').then((res) => {
+    //   this.res = res;
+    // });
+    this.axios.get('/user/login').then((res) => {
       this.res = res;
     });
   },

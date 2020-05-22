@@ -5,8 +5,13 @@ import VueAxios from 'vue-axios';
 import App from './App.vue';
 // import env from './env';
 
+const mock = true;
+if (mock) {
+  //import是预编译加载，在编译的时候就会被加载写到内存中，require是从上到下执行的时候才去加载的。
+  require('./mock/api');
+}
 //根据前端跨域方式做调整
-// axios.defaults.baseURL = '/api';
+axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 
 //根据环境变量获取不同的请求地址
